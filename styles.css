@@ -1,0 +1,92 @@
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #3b2c85;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    header {
+        background-color: #2e1a65;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    h1,
+    h2 {
+        color: white;
+    }
+
+    .pantalla {
+        display: none;
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        width: 90%;
+        max-width: 500px;
+        background-color: #5e4db2;
+        border-radius: 20px;
+        
+    }
+
+    .visible {
+        display: block;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 250px;
+          }
+
+    button {
+        margin: 10px 5px;
+        padding: 15px 30px;
+        font-size: 16px;
+        background-color: #ffc107;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        background-color: #ffdd57;
+    }
+
+    #mensaje-error {
+        color: #ff5252;
+        margin-top: 10px;
+    }
+
+    #mensaje-mala,
+    #mensaje-bueno,
+    #mensaje-final {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    #historial {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .emoji {
+        font-size: 60px;
+    }

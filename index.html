@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comer Si o No !</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="headerContent"> Comer si o no !!</h1>
+    </header>
+
+    <div id="pantalla-inicio" class="pantalla visible">
+        <h2>Jueguito de comer si o no!</h2>
+        <label>¿Cuántos jugadores?</label><br>
+        <input type="number" id="num-jugadores" min="1" max="3"><br><br>
+        <button onclick="mostrarFormularioNombres()">Siguiente</button>
+        <p id="mensaje-error" style="color:red;"></p>
+    </div>
+
+    
+    <div id="pantalla-nombres" class="pantalla">
+        <h2>Ingresa los nombres de los jugadores</h2>
+        <form id="form-nombres"></form>
+        <button onclick="iniciarJuego()">Comenzar Juego</button>
+    </div>
+
+    
+    <div id="pantalla-juego" class="pantalla">
+        <h2>Turno de <span id="jugador-actual"></span></h2>
+        <p>¿Quieres comer?</p>
+        <button onclick="elegirComer(true)">Sí</button>
+        <button onclick="elegirComer(false)">No</button>
+        <p id="resultado-turno"></p>
+        <p id="estado-jugadores"></p>
+        <div id="historial"></div>
+    </div>
+
+    
+    <div id="pantalla-mala" class="pantalla">
+        <h2>😢</h2>
+        <p id="mensaje-mala"></p>
+        <button onclick="continuarJuego()">Continuar</button>
+        <button onclick="finalizarJuego('El juego fue terminado antes de tiempo.')">Salir</button>
+    </div>
+    <div id="pantalla-buena" class="pantalla">
+        <h2>☺️</h2>
+        <p id="mensaje-bueno"></p>
+        <button onclick="continuarJuego()">Continuar</button>
+        <button onclick="finalizarJuego('El juego fue terminado antes de tiempo.')">Salir</button>
+    </div>
+    
+    <div id="pantalla-final" class="pantalla">
+        <h2>¡Juego Terminado!</h2>
+        <div id="mensaje-final"></div>
+        <button onclick="location.reload()">Reiniciar</button>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
